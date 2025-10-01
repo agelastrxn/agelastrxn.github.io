@@ -12,17 +12,19 @@
       color: #333;
     }
     header {
-      background: #222;
+      background: linear-gradient(135deg, #222, #00bcd4);
       color: #fff;
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
     header h1 { margin: 0; font-size: 2.5em; }
-    header p { margin-top: 10px; font-size: 1.2em; color: #bbb; }
+    header p { margin-top: 10px; font-size: 1.2em; color: #eee; }
     nav {
       background: #444;
-      padding: 10px;
+      padding: 12px;
       text-align: center;
+      position: sticky;
+      top: 0;
     }
     nav a {
       color: #fff; text-decoration: none;
@@ -30,7 +32,7 @@
     }
     nav a:hover { color: #00bcd4; }
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
     }
@@ -43,11 +45,23 @@
     .project {
       background: #fff;
       padding: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
     }
-    .project h3 { margin-top: 0; }
+    .project img {
+      max-width: 280px;
+      border-radius: 8px;
+      margin-right: 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .project-text {
+      flex: 1;
+    }
     footer {
       background: #222;
       color: #bbb;
@@ -84,19 +98,28 @@
     <h2>Projects</h2>
 
     <div class="project">
-      <h3>Luna Center</h3>
-      <p>A Flutter mobile app built for a learning center. Implemented authentication, course management, and modern UI design.</p>
-      <p><a href="https://github.com/agelastrxn/luna_center" target="_blank">🔗 GitHub Repo</a></p>
+      <img src="images/luna.png" alt="Luna Center App">
+      <div class="project-text">
+        <h3>Luna Center</h3>
+        <p>A Flutter mobile app built for a learning center. Implemented authentication, course management, and modern UI design.</p>
+        <p><a href="https://github.com/agelastrxn/luna_center" target="_blank">🔗 GitHub Repo</a></p>
+      </div>
     </div>
 
     <div class="project">
-      <h3>Frazex Internship Projects</h3>
-      <p>Worked on various Flutter modules during my internship at Frazex LLC, focusing on API integration and state management.</p>
+      <img src="images/project1.png" alt="Internship Project">
+      <div class="project-text">
+        <h3>Frazex Internship Projects</h3>
+        <p>Worked on various Flutter modules during my internship at Frazex LLC, focusing on API integration and state management.</p>
+      </div>
     </div>
 
     <div class="project">
-      <h3>Personal Flutter Experiments</h3>
-      <p>Experimenting with UI/UX concepts, animations, and Firebase integration in multiple small apps.</p>
+      <img src="images/project2.png" alt="Personal Experiments">
+      <div class="project-text">
+        <h3>Personal Flutter Experiments</h3>
+        <p>Experimenting with UI/UX concepts, animations, and Firebase integration in multiple small apps.</p>
+      </div>
     </div>
   </section>
 
